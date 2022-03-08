@@ -21,6 +21,9 @@
   },
   "homepage": "https://github.com/carlylechia/Chias-Leaderboard#readme",
   "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.0",
     "eslint": "^7.32.0",
