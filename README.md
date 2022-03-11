@@ -4,7 +4,7 @@
 
 > A web application people can use to upload their scores, which will be displayed.
 
-
+![Leaderboard](src/assets/Leaderboard.png)
 ## Built With
 
 - Javascript, HTML, CSS
@@ -12,7 +12,7 @@
 
 ## Live Demo
 
-Not ready yet
+Click [this link](https://carlylechia.github.io/Chias-Leaderboard/) to open the application in your browser.
 
 ## Getting Started
 
@@ -32,8 +32,6 @@ Internet connection.
 
 Proceed to follow these steps:
 
-Follow these steps:
-
 - Create a folder in the local storage of your computer which will contain the repository;
 - open your browser and go to [the project's repository on github](https://github.com/carlylechia/Chias-Leaderboard);
 - Click on the `code button` and copy the https link that is provided on the dropdown;
@@ -48,7 +46,7 @@ Follow these steps:
 👤 **Chia Carlyle**
 
 - GitHub: [@carlylechia](https://github.com/carlylechia)
-- Twitter: [@CarlyleChia](https://twitter.com/CarlyleChia)
+- Twitter: [@ChiaCarlyle](https://twitter.com/chiacarlyle)
 - LinkedIn: [Chia Carlyle](https://linkedin.com/in/chia-carlyle)
 
 ## 🤝 Contributing

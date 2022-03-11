@@ -9,18 +9,59 @@ body {
   overflow-x: hidden;
 }
 
-header {
-  margin: 50px 0 30px 20vw;
+body {
+  background-color: gold;
 }
 
 main {
+  background-color: aliceblue;
+  width: 75vw;
+  height: 100%;
+  padding: 50px 50px 50px 50px;
+  margin: 100px auto 50px auto;
+  border-radius: 12px;
+}
+
+header {
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+h1 {
+  color: goldenrod;
+}
+
+.fa-star {
+  font-size: 25px;
+}
+
+.main {
   display: flex;
-  margin: 50px;
+  flex-direction: row;
   justify-content: center;
+  align-items: flex-start;
+}
+
+.badged {
+  display: flex;
+}
+
+.fa-medal {
+  margin-right: 8px;
+  font-size: 25px;
+}
+
+.fa-user-plus {
+  margin-right: 5px;
+  font-size: 25px;
 }
 
 .section-head {
   display: flex;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .section-body {
@@ -28,16 +69,31 @@ main {
 }
 
 .left {
-  margin-right: 70px;
+  border: 1px solid silver;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 100%;
+  overflow-x: scroll;
 }
 
 .left .section-body {
   border: 2px solid black;
-  min-width: 30vw;
+  border-radius: 7px;
+  min-width: 25vw;
+  max-width: 100%;
+  overflow-x: scroll;
 }
 
 table thead {
   height: 30px;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 table thead tr th {
@@ -45,12 +101,28 @@ table thead tr th {
   width: 100%;
 }
 
-.left .section-body table tbody tr:nth-child(even) {
-  background-color: #999;
+.left .section-body table tbody tr:nth-child(odd) {
+  background-color: rgb(255, 255, 255);
+}
+
+.refresh {
+  background-color: rgb(109, 218, 109);
 }
 
 .reset {
   margin: 0;
+  background-color: rgb(250, 91, 91);
+}
+
+.submit {
+  background-color: rgb(133, 133, 250);
+  padding: 0;
+}
+
+.right {
+  border: 1px solid silver;
+  border-radius: 10px;
+  padding: 30px;
 }
 
 .end {
@@ -62,28 +134,38 @@ form {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: 20vw;
+  width: 25vw;
 }
 
 form input {
   border: 2px solid black;
+  border-radius: 3px;
   margin-bottom: 10px;
   height: 30px;
-  width: 20vw;
+  width: 25vw;
   padding: 10px;
 }
 
 button {
-  border: 2px solid rgb(17, 16, 16);
-  width: 70px;
-  height: 30px;
-  margin-left: 15px;
+  border: 2px solid aliceblue;
+  width: 100px;
+  height: 40px;
   box-shadow: 3px 5px #999;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-weight: bold;
+  font-size: large;
+  transition: 0.5s ease-out;
 }
 
-form button {
-  margin: 0;
-  justify-content: flex-end;
+button:hover {
+  transform: scale(1.2);
+}
+
+button:active {
+  color: aliceblue;
 }
 
 .hide {
@@ -92,4 +174,46 @@ form button {
 
 .show {
   display: block;
+  text-align: center;
+  margin: 20px 0 -100px 0;
+}
+
+.loading {
+  border-radius: 50%;
+}
+
+.success-message {
+  font-size: 25px;
+  font-weight: 200;
+  color: green;
+  padding: 15px;
+}
+
+.animate {
+  animation: bouge 0.92s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  animation-iteration-count: 1;
+  transform: translateX(0);
+}
+
+@keyframes bouge {
+  10%,
+  90% {
+    transform: translateX(-1px);
+  }
+
+  20%,
+  80% {
+    transform: translateX(2px);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translateX(-4px);
+  }
+
+  40%,
+  60% {
+    transform: translateX(4px);
+  }
 }
