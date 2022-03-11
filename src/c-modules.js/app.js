@@ -74,6 +74,7 @@ class Application {
     res.then((data) => {
       let domContent = '';
       const users = data.result;
+      users.sort((a, b) => b.score - a.score);
       users.forEach((user) => {
         domContent = `${domContent}<tr>
         <td>${user.user}</td>

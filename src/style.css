@@ -73,12 +73,16 @@ h1 {
   border: 1px solid grey;
   border-radius: 10px;
   padding: 30px;
+  max-width: 100%;
+  overflow-x: scroll;
 }
 
 .left .section-body {
   border: 2px solid black;
   border-radius: 7px;
   min-width: 25vw;
+  max-width: 100%;
+  overflow-x: scroll;
 }
 
 table thead {
@@ -89,6 +93,8 @@ table,
 th,
 td {
   border: 1px solid black;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 table thead tr th {
@@ -142,7 +148,7 @@ form input {
 }
 
 button {
-  border: 2px solid rgb(17, 16, 16);
+  border: 2px solid aliceblue;
   width: 100px;
   height: 40px;
   box-shadow: 3px 5px #999;
