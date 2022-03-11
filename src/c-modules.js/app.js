@@ -82,7 +82,7 @@ class Application {
       const users = data.result;
       users.sort((a, b) => b.score - a.score);
       users.forEach((user) => {
-        domContent = `${domContent}<tr>
+        domContent = `${domContent}<tr class="animate">
         <td>${user.user}</td>
         <td class="text-primary">${user.score}</td>
         </tr>`;
