@@ -175,6 +175,12 @@ button:active {
 
 .show {
   display: block;
+  text-align: center;
+  margin-top: -20px;
+}
+
+.loading {
+  border-radius: 50%;
 }
 
 .success-message {

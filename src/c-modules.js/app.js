@@ -8,6 +8,7 @@ class Application {
     this.tableList = document.getElementById('scores');
     this.refreshBtn = document.querySelector('.refresh');
     this.resetBtn = document.querySelector('.reset');
+    this.loader = document.getElementById('Loader');
     this.localStorageStringInstance = 'app_config';
 
     this.fireFly = new FireFlyCity();
@@ -39,11 +40,13 @@ class Application {
   }
 
   createNewToken = () => {
+    this.showGif();
     const res = this.fireFly.getID('Seed');
     res.then((data) => {
       const stringResult = data.result;
       this.fireFly.id = stringResult.substring(13, 34);
       this.onSave(this.fireFly.id);
+      this.hideGif();
       this.refreshList();
     })
       .catch((error) => {
@@ -52,6 +55,7 @@ class Application {
   }
 
   addUserScore = () => {
+    this.showGif();
     const res = this.fireFly.insertData(this.inputs[0].value, this.inputs[1].value);
     res.then((data) => {
       this.success_message.innerHTML = data.result;
@@ -59,6 +63,7 @@ class Application {
       this.inputs[0].value = '';
       this.inputs[1].value = '';
 
+      this.hideGif();
       this.refreshList();
 
       const ref = this;
@@ -70,6 +75,7 @@ class Application {
   }
 
   refreshList = () => {
+    this.showGif();
     const res = this.fireFly.fetchData();
     res.then((data) => {
       let domContent = '';
@@ -81,11 +87,22 @@ class Application {
         <td class="text-primary">${user.score}</td>
         </tr>`;
       });
+      this.hideGif();
       this.tableList.innerHTML = domContent;
     })
       .catch((error) => {
         throw error;
       });
+  }
+
+  showGif = () => {
+    this.loader.classList.remove('hide');
+    this.loader.classList.add('show');
+  }
+
+  hideGif = () => {
+    this.loader.classList.remove('show');
+    this.loader.classList.add('hide');
   }
 
   onSave = (token) => {
