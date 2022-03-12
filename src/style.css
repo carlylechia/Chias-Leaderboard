@@ -59,10 +59,11 @@ h1 {
 .section-head {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: rgb(255, 255, 255);
   padding: 20px;
   border-radius: 10px;
-  min-width: 22vw;
+  width: 30vw;
 }
 
 .section-body {
@@ -73,7 +74,7 @@ h1 {
   border: 1px solid silver;
   border-radius: 10px;
   padding: 30px;
-  width: 27vw;
+  width: 35vw;
   max-width: 100%;
   overflow-x: scroll;
 }
@@ -81,7 +82,8 @@ h1 {
 .left .section-body {
   border: 2px solid black;
   border-radius: 7px;
-  width: 22vw;
+  width: 29.5vw;
+  background-color: rgb(255, 255, 255);
   overflow-x: scroll;
 }
 
@@ -93,7 +95,7 @@ table,
 th,
 td {
   border: 1px solid black;
-  width: 21.75vw;
+  width: 29.3vw;
   overflow-x: hidden;
 }
 
@@ -103,7 +105,7 @@ table thead tr th {
 }
 
 .left .section-body table tbody tr:nth-child(odd) {
-  background-color: rgb(255, 255, 255);
+  background-color: aliceblue;
 }
 
 .refresh {
@@ -118,13 +120,14 @@ table thead tr th {
 .submit {
   background-color: rgb(133, 133, 250);
   padding: 0;
+  margin-right: 8px;
 }
 
 .right {
   border: 1px solid silver;
   border-radius: 10px;
   padding: 30px;
-  width: 27vw;
+  width: 35vw;
   overflow-x: scroll;
 }
 
@@ -137,15 +140,16 @@ form {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: 22vw;
+  width: 30vw;
 }
 
 form input {
   border: 2px solid black;
   border-radius: 3px;
   margin-bottom: 10px;
+  margin-right: 8px;
   height: 30px;
-  width: 20vw;
+  width: 29vw;
   padding: 10px;
 }
 
